@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Donnangelo - Interesses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --accent-color: #10b981;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+        }
+
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Header Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Page Styles */
+        .page-header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        /* Interests Page */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .interest-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .interest-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .interest-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .interest-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Lucas Donnangelo</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Mim</a></li>
+                <li><a href="habilidades.html" class="nav-link">Habilidades & Projetos</a></li>
+                <li><a href="interesses.html" class="nav-link active">Interesses</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Interesses</h1>
+                <p class="page-subtitle">Paixões que movem minha jornada</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon" style="background: #3b82f6;">🤖</div>
+                    <h3 class="interest-title">Inteligência Artificial</h3>
+                    <p class="interest-description">
+                        Fascinado pelo potencial da IA em transformar dados em insights valiosos e automatizar processos complexos.
+                    </p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon" style="background: #10b981;">⚽</div>
+                    <h3 class="interest-title">Esportes</h3>
+                    <p class="interest-description">
+                        O futebol e o surf são minha válvula de escape, proporcionando equilíbrio entre mente e corpo.
+                    </p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon" style="background: #8b5cf6;">⚛️</div>
+                    <h3 class="interest-title">Tecnologia Quântica</h3>
+                    <p class="interest-description">
+                        Intrigado pelas possibilidades revolucionárias da computação quântica no futuro da ciência de dados.
+                    </p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon" style="background: #f59e0b;">📈</div>
+                    <h3 class="interest-title">Mercado Financeiro</h3>
+                    <p class="interest-description">
+                        Estudo análises quantitativas e algoritmos de trading como caminho para a liberdade financeira.
+                    </p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon" style="background: #ef4444;">✈️</div>
+                    <h3 class="interest-title">Viagens</h3>
+                    <p class="interest-description">
+                        Cada destino amplia minha perspectiva e inspira novas abordagens para resolver problemas.
+                    </p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon" style="background: #06b6d4;">🚀</div>
+                    <h3 class="interest-title">Empreendedorismo</h3>
+                    <p class="interest-description">
+                        Sonho em criar soluções inovadoras que impactem positivamente a vida das pessoas através da tecnologia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
